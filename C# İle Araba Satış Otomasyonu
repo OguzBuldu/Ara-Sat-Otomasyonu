@@ -1,0 +1,1307 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ArabaSatışOtomasyonu
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Galerimize Hoşgeldiniz.");
+            List<string> markalar = new List<string> { "Toyota", "Fiat", "Mercedes", "Audi", "Ford", "Porshe", "Honda" }; // Liste 
+
+            while (true)
+            {
+                Console.WriteLine("Lütfen Satın Almak İstediğiniz Aracın Markasını Listede Bulunan Numaralardan Ya Da Aracın Markasını Yazınız.");
+                // Listeyi Göstermek ve Başına Rakamları Koymak İçin;
+                markalar.Select((marka, index) => $"{index + 1}. {marka}")
+               .ToList()
+               .ForEach(Console.WriteLine);
+
+                string secilen_araç = Console.ReadLine();
+                if (secilen_araç == "1" || secilen_araç == "toyota")
+                {
+                    Console.WriteLine("Toyota'yı Seçtiniz.");
+                    Toyota();
+
+
+                }
+                else if (secilen_araç == "2" || secilen_araç == "fiat")
+                {
+                    Console.WriteLine("Fiat'ı Seçtiniz.");
+                    Fiat();
+                }
+                else if (secilen_araç == "3" || secilen_araç == "mercedes")
+                {
+                    Console.WriteLine("Mercedes'i Seçtiniz.");
+                    Mercedes();
+                }
+                else if (secilen_araç == "4" || secilen_araç == "audi")
+                {
+                    Console.WriteLine("Auid'i Seçtiniz.");
+                    Audi();
+                }
+                else if (secilen_araç == "5" || secilen_araç == "ford")
+                {
+                    Console.WriteLine("Ford'u Seçtiniz.");
+                    Ford();
+                }
+                else if (secilen_araç == "6" || secilen_araç == "porshe")
+                {
+                    Console.WriteLine("Porshe'yi Seçtiniz.");
+                    Porshe();
+                }
+                else if (secilen_araç == "7" || secilen_araç == "honda")
+                {
+                    Console.WriteLine("Honda'yı Seçtiniz.");
+                    Honda();
+                }
+                else
+                {
+                    Console.WriteLine("Lütfen Listede Bulunan Araçlardan Birini Yazınız.");
+                    continue;
+                }
+
+
+            }
+
+        }
+        static void Toyota()
+        {
+
+            while (true)
+            {
+                Console.WriteLine("Toyota Modellerimiz;");
+                List<string> toyota_modelleri = new List<string> { "Corolla", "Hıllux", "Yaris", "Prius" };
+                toyota_modelleri.Select((model1, index) => $"{index + 1}. {model1}")
+               .ToList()
+               .ForEach(Console.WriteLine);
+
+                string toyota_secimi = Console.ReadLine();
+
+                if (toyota_secimi == "1" || toyota_secimi == "corolla")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 800.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "2" || toyota_secimi == "Hıllux")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 943.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "3" || toyota_secimi == "yaris")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 735.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+
+                }
+                if (toyota_secimi == "4" || toyota_secimi == "Prius")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 645.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+                }
+            }
+        }
+
+        static void Honda()
+        {
+            while (true)
+            {
+                Console.WriteLine("Fiat Modellerimiz;");
+                List<string> toyota_modelleri = new List<string> { "Honda", "City", "Stonic", "Sorento" };
+                toyota_modelleri.Select((model1, index) => $"{index + 1}. {model1}")
+               .ToList()
+               .ForEach(Console.WriteLine);
+
+                string toyota_secimi = Console.ReadLine();
+
+                if (toyota_secimi == "1" || toyota_secimi == "honda")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 732.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "2" || toyota_secimi == "city")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 425.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "3" || toyota_secimi == "stonic")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 689.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+
+                }
+                if (toyota_secimi == "4" || toyota_secimi == "sorento")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 578.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+                }
+            }
+
+        }
+
+        static void Mercedes()
+        {
+            while (true)
+            {
+                Console.WriteLine("Toyota Modellerimiz;");
+                List<string> toyota_modelleri = new List<string> { "E-200", "Maybach", "B-150", "AMG" };
+                toyota_modelleri.Select((model1, index) => $"{index + 1}. {model1}")
+               .ToList()
+               .ForEach(Console.WriteLine);
+
+                string toyota_secimi = Console.ReadLine();
+
+                if (toyota_secimi == "1" || toyota_secimi == "e-200")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 1.100.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "2" || toyota_secimi == "maybach")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 1.943.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "3" || toyota_secimi == "b-150")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 1.735.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+
+                }
+                if (toyota_secimi == "4" || toyota_secimi == "amg")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 1.645.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+                }
+            }
+        }
+
+        static void Audi()
+        {
+            while (true)
+            {
+                Console.WriteLine("Toyota Modellerimiz;");
+                List<string> toyota_modelleri = new List<string> { "A3", "A4", "Q7", "Q3" };
+                toyota_modelleri.Select((model1, index) => $"{index + 1}. {model1}")
+               .ToList()
+               .ForEach(Console.WriteLine);
+
+                string toyota_secimi = Console.ReadLine();
+
+                if (toyota_secimi == "1" || toyota_secimi == "a3")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 1.542.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "2" || toyota_secimi == "a4")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 943.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "3" || toyota_secimi == "q7")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 1.435.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> {"Siyah"};
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    
+                    
+                    if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+
+                }
+                if (toyota_secimi == "4" || toyota_secimi == "q3")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 1.245.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+                }
+            }
+        }
+
+        static void Porshe()
+        {
+            while (true)
+            {
+                Console.WriteLine("Porsche Modellerimiz;");
+                List<string> toyota_modelleri = new List<string> { "911", "718",};
+                toyota_modelleri.Select((model1, index) => $"{index + 1}. {model1}")
+               .ToList()
+               .ForEach(Console.WriteLine);
+
+                string toyota_secimi = Console.ReadLine();
+
+                if (toyota_secimi == "1" || toyota_secimi == "911")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 2.110.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "2" || toyota_secimi == "718")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 1.943.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }  
+            }
+        }
+
+        static void Fiat()
+        {
+            while (true)
+            {
+                Console.WriteLine("Fiat Modellerimiz;");
+                List<string> toyota_modelleri = new List<string> { "Egea", "Linea", "Doblo", "Panda" };
+                toyota_modelleri.Select((model1, index) => $"{index + 1}. {model1}")
+               .ToList()
+               .ForEach(Console.WriteLine);
+
+                string toyota_secimi = Console.ReadLine();
+
+                if (toyota_secimi == "1" || toyota_secimi == "egea")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 800.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "2" || toyota_secimi == "linea")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 343.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "3" || toyota_secimi == "doblo")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 435.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+
+                }
+                if (toyota_secimi == "4" || toyota_secimi == "panda")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 645.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Mavi", "Kırmızı", "Beyaz", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "mavi")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "3" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+                }
+            }
+        }
+
+        static void Ford()
+        {
+            while (true)
+            {
+                Console.WriteLine("Ford Modellerimiz;");
+                List<string> toyota_modelleri = new List<string> { "Mustang", "Tourneo", "Torino",};
+                toyota_modelleri.Select((model1, index) => $"{index + 1}. {model1}")
+               .ToList()
+               .ForEach(Console.WriteLine);
+
+                string toyota_secimi = Console.ReadLine();
+
+                if (toyota_secimi == "1" || toyota_secimi == "mutang")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 3.800.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> {"Kırmızı", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    
+                    if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                   
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "2" || toyota_secimi == "tourneo")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 643.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Beyaz" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    
+                    
+                    if (renk_secimi == "1" || renk_secimi == "beyaz")
+                    {
+                        Console.WriteLine("Beyaz Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+                }
+
+                if (toyota_secimi == "3" || toyota_secimi == "torino")
+                {
+                    Console.WriteLine("Aracımızın Fiyati; 735.000 TL");
+                    Console.WriteLine("Bu Modellde Bulunan Renklerimiz; ");
+                    List<string> renkler = new List<string> { "Yeşil", "Kırmızı", "Siyah" };
+                    renkler.Select((renk, index) => $"{index + 1}.{renk}")
+                    .ToList()
+                    .ForEach(Console.WriteLine);
+
+                    string renk_secimi = Console.ReadLine();
+
+                    if (renk_secimi == "1" || renk_secimi == "yeşil")
+                    {
+                        Console.WriteLine("Mavi Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+
+                    }
+                    else if (renk_secimi == "2" || renk_secimi == "kırmızı")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    
+                    else if (renk_secimi == "4" || renk_secimi == "siyah")
+                    {
+                        Console.WriteLine("Kırmızı Rengi Seçtiniz.");
+                        Console.WriteLine("**************************");
+                        Console.WriteLine("Hayırlı Uğurlu Olsun (: ");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Elimizde O Renkten Yok Maalesef");
+                        continue;
+                    }
+
+
+                }
+                
+            }
+        }
+        
+    }
+}
